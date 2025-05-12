@@ -1,0 +1,67 @@
+.voice-assistant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 260px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.flare-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ffebee 0%, #f44336 60%, #b71c1c 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.7;
+  transition: box-shadow 0.3s, opacity 0.3s;
+  z-index: 1;
+  animation: flare-pulse 2s infinite;
+}
+
+.flare-circle.active {
+  animation: flare-pulse-active 1s infinite;
+  opacity: 1;
+  box-shadow: 0 0 40px 10px #f44336, 0 0 80px 20px #d32f2f;
+}
+
+@keyframes flare-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.9; }
+}
+
+@keyframes flare-pulse-active {
+  0%, 100% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.22); opacity: 0.8; }
+}
+
+.mic-btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 90px;
+  background: #d32f2f;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px #f44336aa;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.mic-btn.active {
+  background: #b71c1c;
+  box-shadow: 0 4px 24px #d32f2faa;
+}
+
+.mic-btn svg {
+  display: block;
+} 

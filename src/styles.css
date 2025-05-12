@@ -1,0 +1,35 @@
+body {
+  background: #fff;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #b71c1c;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.transcript-area {
+  margin-top: 32px;
+  min-height: 32px;
+  min-width: 320px;
+  max-width: 90vw;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: #ffebee;
+  color: #b71c1c;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px #f4433610;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.placeholder {
+  color: #f44336;
+  opacity: 0.6;
+} 
